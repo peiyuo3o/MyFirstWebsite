@@ -1,0 +1,1042 @@
+@import "normalize";
+
+%nostyle-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+$main-color: #000;
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.4;
+    color: #555;
+}
+
+a {
+    color: #666;;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.page-header {
+    background: #000;
+    height: 46px;
+
+    h3 {
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        line-height: 2;
+    }
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+.left-menu {
+    ul {
+        display: flex;
+     }
+
+     li {
+        // flex: 0 0 70%;
+        flex: 0 0 140px;
+    }
+
+    a {
+        display: block;
+        height: 50px;
+        text-align: center;
+        line-height: 3;
+     }
+
+     a:hover {
+        background: #555;
+        color: #fff;
+        text-decoration: none;
+     }
+
+     button {
+         display: none;
+     }
+ }
+
+.middle-menu a {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 160px;
+}
+
+
+.right-menu {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        right: 70px;
+     }
+
+     li {
+        flex: 0 0 66%;
+    }
+
+    a {
+        display: block;
+        height: 50px;
+        text-align: center;
+        line-height: 3;
+     }
+
+     a:hover {
+        background: #555;
+        color: #fff;
+        text-decoration: none;
+     }
+
+     .cart {
+        flex: 0 0 80px;
+    }
+ }
+
+.index-image {
+    height: 430px;
+    background: url(../images/index-picture.jpg)
+                center center no-repeat;
+                background-size: cover;
+    position: relative;
+
+    h2 {
+        font-size: 50px;
+        color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        left: 80px;
+    }
+}
+
+.hot-items h2 {
+    color: #000;
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.hot-goods {
+    ul {
+        @extend %nostyle-list;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    li {
+        flex: 0 0 25%;
+        a {
+            color: #555;
+            text-decoration: none;
+        }
+    }
+}
+
+.featured-item {
+    text-align: center;
+    background: #888;
+    color: #fff;
+    width: 100%;
+    height: 350px;
+
+    h2 {
+        font-size: 45px;
+        margin: 0;
+        line-height: 3;
+    }
+
+    .featured-detail {
+        width: 100%;
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.subscription {
+    text-align: center;
+    font-size: 1.3em;
+
+    h2 {
+        margin: 130px 0 0;
+        font-size: 35px;
+    }
+
+    h3 {
+        margin: 0 0 30px;
+        font-size: 35px;
+    }
+
+
+    input.mail-text {
+        width: 565px;
+        height: 28px;
+        border: none;
+        border-bottom: #888 1px solid;
+        padding-left: 45px;
+        margin: 0 auto;
+        margin-right: 20px;
+    }
+
+    i {
+        position: relative;
+        left: 23px;
+    }
+
+    input.send-btn {
+        width: 610px;
+        height: 50px;
+        background-color: #000;
+        color: #fff;
+        margin: 20px auto 70px;
+
+        &:hover {
+            background: mix(#000, #fff, 70%)
+        }
+    }
+}
+
+.page-footer {
+    background: #000;
+    
+    ul {
+        @extend %nostyle-list;
+        display: flex;
+        height: 40px;
+    }
+
+    li {
+         line-height: 40px;
+        flex: 0 0 20%;
+    }
+
+    a {
+        display: block;
+        height: 20px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+
+    }
+
+    a:hover {
+        background: mix(#000, #fff, 70%);
+        height: 40px;
+    }
+
+    .copyright {
+        color: #000;
+        background: mix(#000, #fff, 30%);
+        text-align: center;
+        line-height: 1.7;
+        height: 30px;
+    }
+}
+
+.branch-step {
+    ul {
+        @extend %nostyle-list;
+        display: flex;
+    }
+
+    li {
+        margin: 50px 10px 0;
+    }
+}
+
+.good-detail .container {
+    margin-top: 50px;
+    display: flex;
+}
+
+.left-detail {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 500px;
+        height: 100%;
+    }
+    
+    .img-detail {
+        width: 500px;
+    }
+}
+
+.right-detail {
+    flex: 1 0 auto;
+    .input-cart {
+        width: 500px;
+        border-bottom: mix(#000, #fff, 20%) 1px solid;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #000;
+    }
+
+    select {
+        width: 100%;
+        height: 50px;
+    }
+
+    .item-count {
+        width: 50px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .submit {
+        display: block;
+        background: #000;
+        color: #fff;
+        margin: 20px 0;
+        width: 100%;
+        height: 50px;
+    }
+}
+
+.recommend-goods {
+    h3 {
+        font-size: 20px;
+    }
+    ul {
+        @extend %nostyle-list;
+    }
+    li {
+        display: flex;
+    }
+
+    li img {
+        margin-bottom: 10px;
+    }
+
+    li p {
+        position: relative;
+        left: 20px;
+        top: 10px;
+    }
+}
+
+.step-btn {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    a {
+        color: #888;
+        margin: 50px 70px 0 50px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #000;
+    }
+}
+
+.back-page p {
+    margin: 30px 0;
+}
+
+.cart-list {
+    a {
+        margin: 30px;
+    }
+
+    table 
+    {
+        width: 100%;
+        border-bottom: mix(#000, #fff, 20%) 1px solid;
+        th {
+            color: #777;
+            text-align: left;
+            border-bottom: mix(#000, #fff, 20%) 1px solid;
+        }
+
+        th:nth-child(2) {
+            padding-right: 50px;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+    }
+
+    td:nth-child(4) {
+        text-align: right;
+    }
+
+    ul {
+        @extend %nostyle-list;
+        display: flex;
+        margin: 20px 0;
+    }
+
+    .img-li {
+        margin-left: 20px;
+
+        li a {
+            margin: 0;
+        }
+    }
+
+    img {
+        height: 100px;
+        width: 120px;
+    }
+
+
+    input {
+        width: 80px;
+        height: 40px;
+    }
+
+    .cartbottom .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cartform-left {
+        margin-top: 30px;
+        input {
+            width: 130px;
+            height: 30px;
+        }
+    }
+
+    .cartform-right {
+        ul {
+            @extend %nostyle-list;
+        }
+
+        li {
+            flex: 100%;
+            margin: 20px 0;
+            text-align: right;
+        }
+
+        .abc
+        {
+            width: 340px;
+            border-top: mix(#000, #fff, 20%) 1px solid;
+        }
+
+        input {
+            width: 340px;
+            height: 60px;
+            background-color: #000;
+            color: #fff;
+            &:hover {
+                background: mix(#000, #fff, 70%)
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    // 這都是item.html上
+    .branch-step {
+        .container {
+            width: 800px;
+        }
+    }
+
+    .good-detail .container {
+        width: 800px;
+    }
+
+    .left-detail {
+        margin-right: 50px;
+        img {
+            width: 400px;
+        }
+
+        .img-detail {
+            width: 400px;
+        }
+
+    }
+
+    .right-detail {
+        .input-cart {
+            width: 400px;
+        }
+    }
+    // 這都是item.html下
+}
+
+@media screen and (max-width: 1190px) {
+    // 這都是index.html上
+    .page-header .container {
+        width: 800px;
+    }
+
+    .hot-items .container {
+        width: 800px;
+    }
+
+    .hot-goods {
+        li {
+            margin: 0 8px;
+        }
+    }
+
+    .left-menu {
+
+        li {
+           flex: 0 0 50%;
+       }
+   }
+
+    .featured-item .container {
+        width: 800px;
+    }  
+
+    .subscription {
+        .container {
+            width: 800px;
+        }
+    }
+
+    .page-footer .container {
+        width: 800px;
+    }
+    // 這都是index.html下
+
+    // 這都是item.html上
+    .branch-step {
+        .container {
+            width: 600px;
+        }
+    }
+
+    .good-detail .container {
+        width: 600px;
+    }
+
+    .left-detail {
+        img {
+            width: 300px;
+        }
+
+        .img-detail {
+            width: 300px;
+        }
+    }
+
+    .right-detail {
+        .input-cart {
+            width: 300px;
+        }
+    }
+
+    .step-btn {
+        .container {
+            width: 600px;
+        }
+    }
+    // 這都是item.html下
+
+    // 這都是cart.html上
+    .cart-list {
+        .container {
+            width: 800px;
+        }
+    }
+
+    .cart-list {
+        .cartform-right {
+            .abc
+            {
+                width: 240px;
+            }
+    
+            input {
+                width: 240px;
+                height: 60px;
+            }
+        // 這都是cart.html下
+        }
+    }
+}
+
+@media screen and (max-width: 900px) { 
+    // 這都是index.html上 
+    .page-header .container {
+        width: 600px;
+    }
+
+    .index-image h2 {
+        font-size: 40px;
+    }
+
+    .hot-items {
+        h2 {
+            font-size: 2em;
+        }
+    }
+
+    .hot-goods {
+        h4 {
+            margin: 0;
+        }
+
+    }
+
+    .subscription {
+        h2 {
+            font-size: 1.5em;
+        }
+    
+        h3 {
+            font-size: 1.5em;
+        }
+    
+        input.mail-text {
+            width: 400px;
+            height: 28px;
+        }
+
+        input.send-btn {
+            width: 450px;
+            height: 40px;
+        }
+    }
+
+    .left-menu {
+        
+        ul {
+            position: absolute;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.7);
+            flex-direction: column;
+            width: 30%;
+        }
+
+        button {
+            display: block;
+            background: #fff;
+            border: none;
+            width: 66px;
+            height: 50px;
+        }
+    }
+
+    .middle-menu {
+        a {
+            font-size: 1.8em;
+            line-height: 1.6em;
+            margin-right: 80px;
+        }
+    }
+
+    .right-menu {
+        .cart {
+            flex: 0 0 40px;
+        }
+    }
+
+    .page-footer .container {
+        width: 600px;
+    }
+   // 這都是index.html下
+
+    // 這都是cart.html上
+    .cart-list {
+        .container {
+            width: 700px;
+        }
+    }
+        // 這都是cart.html下
+}
+    
+@media screen and (max-width: 850px) {
+    .hot-items .container {
+        width: 600px;
+    }
+
+    .hot-goods {
+        img {
+            height: 180;
+            width: 180px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    // 這都是index.html上
+    .featured-item {
+        .container {
+            width: 600px;
+        }  
+    }
+    
+    .subscription {
+        .container {
+            width: 500px;
+        }
+    }
+
+    .page-footer .container {
+        width: 500px;
+    }
+    // 這都是index.html下
+
+    // 這都是item.html上
+    .branch-step {
+        .container {
+            width: 430px;
+        }
+    }
+    .good-detail .container {
+        width: 430px;
+        display: block;
+    }
+    .left-detail {
+        img {
+            width: 450px;
+            height: 100%;
+        }
+        
+        .img-detail {
+            width: 450px;
+        }
+    }
+
+    .right-detail {
+        margin-top: 50px;
+        .input-cart {
+            width: 450px;
+        }
+
+    }
+
+    .recommend-goods {
+        h3 {
+            font-size: 30px;
+        }
+
+        li {
+            display: flex;
+        }
+    
+        li img {
+            width: 200px;
+        }
+    
+        li p {
+            top: 40px;
+        }
+    }
+
+    .step-btn {
+        .container {
+        width: 500px;
+        }
+    }
+    // 這都是item.html下
+
+    // 這都是cart.html上
+    .cart-list {
+        .container {
+            width: 550px;
+        }
+    }
+    
+    .cart-list {
+        .cartform-right {
+            .abc
+            {
+                 width: 240px;
+            }
+        
+            input {
+                width: 240px;
+                height: 60px;
+            }
+        }
+
+        table ul {
+            flex-direction: column;
+        }
+    
+        .img-li {
+            margin: 0;
+        }
+    }
+    // 這都是cart.html下
+}
+
+@media screen and (max-width: 620px) {
+    // 這都是index.html上
+    .page-header .container {
+        width: 400px;
+    }
+
+    .hot-items .container {
+        width: 400px;
+    }
+
+    .featured-item {
+        height: 300px;
+        margin-top: 50px;
+        .container {
+            width: 520px;
+        }  
+
+        h2 {
+            font-size: 35px;
+        }
+    }
+    
+    .subscription {
+        .container {
+            width: 500px;
+        }
+    }
+
+    .page-footer .container {
+        width: 500px;
+    }
+    // 這都是index.html下
+
+     // 這都是cart.html上
+     .cart-list {
+        .container {
+            width: 490px;
+        }
+    }
+    
+    .cart-list {
+        .cartform-right {
+            .abc
+            {
+                 width: 200px;
+            }
+        
+            input {
+                width: 200px;
+            }
+        }
+    }
+    // 這都是cart.html下
+}
+
+@media screen and (max-width: 540px) {
+    // 這都是index.html上
+    .index-image {
+        h2 {
+            font-size: 35px;
+        }
+    }
+    .right-menu {
+        ul {
+            width: 40px;
+        }
+        li {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .featured-item {
+        height: 400px;
+        margin-top: 50px;
+        .container {
+            width: 300px;
+        }  
+
+        h2 {
+            font-size: 30px;
+        }
+
+    }
+    
+    .subscription {
+        .container {
+            width: 410px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+
+        input.mail-text {
+            width: 250px;
+            height: 28px;
+        }
+    
+        input.send-btn {
+            width: 300px;
+            height: 40px;
+        }
+    }
+    .page-footer {
+        .container {
+            width: 350px;
+        }
+
+        a {
+            font-size: .8em;
+        }
+
+    }
+    // 這都是index.html下
+
+    // 這都是item.html上
+    .branch-step .container{
+        width: 300px;
+    }
+
+    .good-detail .container {
+        width: 300px;
+    }
+
+    .left-detail {
+        img {
+            width: 300px;
+        }
+        
+        .img-detail {
+            width: 300px;
+        }
+    }
+
+    .right-detail {
+        .input-cart {
+            width: 300px;
+        }
+    }
+
+    .recommend-goods {
+        h3 {
+            font-size: 25px;
+        }
+    
+        li img {
+            width: 150px;
+        }
+    
+        li p {
+            top: 30px;
+        }
+    }
+
+    .step-btn {
+        .container {
+            width: 360px;
+        }
+
+        a {
+            margin: 50px 30px 0;
+        }
+    }
+    // 這都是item.html下
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 做壞的770
+    // .branch-step {
+    //     .container {
+    //         width: 500px;
+    //     }
+    // }
+
+    // .good-detail .container {
+    //     width: 500px;
+    // }
+
+    // .left-detail {
+    //     img {
+    //         width: 200px;
+    //     }
+
+    //     .img-detail {
+    //         width: 200px;
+    //     }
+    // }
+
+    // .right-detail {
+    //     .input-cart {
+    //         width: 200px;
+    //     }
+    // }
+
+    // .step-btn {
+    //     .container {
+    //         width: 500px;
+    //     }
+    // }
+
+    // .recommend-goods {
+    //     h3 {
+    //         font-size: 20px;
+    //     }
+    //     ul {
+    //         @extend %nostyle-list;
+    //     }
+    //     li {
+    //         display: flex;
+    //     }
+    
+    //     li img {
+    //         margin-bottom: 10px;
+    //     }
+    
+    //     li p {
+    //         position: relative;
+    //         left: 20px;
+    //         top: 10px;
+    //     }
+    // }
