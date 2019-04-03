@@ -65,8 +65,8 @@
     </div>
     <div class="container mt-5">
         <div class="input-group mb-3">
-            <input type="text" id="input" class="form-control" placeholder="請輸入數字" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
+            <input type="number" id="input" class="form-control" placeholder="請輸入數字" aria-label="Recipient's username"
+                aria-describedby="button-addon2" oninput="if(value.length>2)value=value.slice(0,2)">
             <div class="input-group-append">
                 <button class="btn btn-dark border buttons-disabled" type="button" onclick="doAnalyse();">確定</button>
             </div>
@@ -143,7 +143,11 @@
         function inputButton() {
             var input = document.getElementById("input");
             var text = this.innerHTML;
-            input.value += text;
+            if(input.value.length < 2)
+            {
+                input.value += text;
+            }
+            
         }
 
         var inputButtons = document.getElementsByClassName("input-pad");
